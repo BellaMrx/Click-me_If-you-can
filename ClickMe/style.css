@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  font-family: 'Helvetica', 'Arial', sans-serif;
   color: #fff;
   font-weight: 300;
   margin: 0;
@@ -10,10 +10,8 @@
 
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  text-align: center;
+  height: auto;
   background-image: radial-gradient(circle, #ee4b2b, #553c9a);
 }
 
@@ -40,64 +38,11 @@ body {
 
 
 
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-li {
-  list-style: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 .container {
-  width: 500px;
-  max-width: 90%;
-  margin: 0 20px;
-}
-.container-input {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 20px 0;
-}
-.container-input label {
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 5px;
-}
-.container-input input {
-  width: 100%;
-  border: 1px solid #7d8085;
-  border-radius: 4px;
-  padding: 10px;
-  outline: none;
-}
-.container-input input:focus {
-  border-color: #bcbec3;
-}
-.container-input input.error {
-  border: 3px solid red;
-}
-.container-input input.done {
-  border: 3px solid green;
+  margin: 2rem;
 }
 
 
-
-
-
-.container-button {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .container-button button {
   background: aliceblue;
   border: none;
@@ -107,19 +52,15 @@ img {
   font-size: 16px;
   font-weight: 600;
   color: #553c9a;
-  margin-top: 20px;
+  margin: 7rem;
   transition: 0.3s ease-in-out;
 }
 
 
-
-
-
-.container-button button.correct {
-  transform: translate(0) !important;
-  cursor: pointer;
-  width: 100%;
-  background: #e9ad38;
-  color: #252f3f;
-}/*# sourceMappingURL=style.css.map */
+footer {
+	position: fixed;
+	top: 0%;
+	left: 0%;
+  z-index: 1;
+}
 
