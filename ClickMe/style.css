@@ -39,7 +39,18 @@ body {
 
 
 .container {
+  display: inline-block;  /*# font left and center */
+  text-align: left;       /*# font left and center */
+  font-size: 1.5rem;
   margin: 2rem;
+
+  
+  width: 500px;
+  max-width: 90%;
+}
+
+.container p {
+  padding-top: 5px;
 }
 
 
