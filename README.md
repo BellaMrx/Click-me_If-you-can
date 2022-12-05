@@ -3,28 +3,26 @@
 
 
 
+<p>"Welcome to my website"</p>
+<p>"Come on, try it"</p>
+<p>"It's not that hard"</p>
+<p>"Really?"</p>
+<p>"You're making a fool of yourself."</p>
+<p>"Try again, you'll be fine"</p>
+<p>"Now it is official embarrassing"</p>
+<p>"Okay, try it now, trust me"</p>
 
- /*# button */
-.button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
 
-.button4 {
-  background-color: white;
-  color: black;
-  border: 2px solid #e7e7e7;
-}
 
-.button4:hover {background-color: #e7e7e7;}
+<p>"Wilkommen auf meiner Webseite"</p>
+<p>"Komm schon, versuch es"</p>
+<p>"So schwer ist es nicht"</p>
+<p>"Wirklich?"</p>
+<p>"Du machst dich lächerlich"</p>
+<p>"Versuchen es noch einmal, aufgeben ist keine Lösung"</p>
+<p>"Jetzt ist es offiziell peinlich"</p>
+<p>"Okay versuch es jetzt, vertrau mir"</p>
+
+
 
 

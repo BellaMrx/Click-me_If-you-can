@@ -15,28 +15,6 @@ body {
   background-image: radial-gradient(circle, #ee4b2b, #553c9a);
 }
 
-/*# Twitter logo */
-.fa {
-	padding: 20px;
-	font-size: 2vw;
-	text-decoration: none;
-	margin: 5px 2px;
-  }
-
-  .fa:hover {
-    opacity: 0.7;
-}
-
-.fa-twitter {
-	color: #55ACEE;
-  }
-
-  span {
-	color: aliceblue;
-  }
-
-
-
 
 .container {
   display: inline-block;  /*# font left and center */
@@ -61,7 +39,6 @@ body {
   width: 50%;
 }
 
-
 .container-button button {
   background: aliceblue;
   border: none;
@@ -79,7 +56,101 @@ body {
   position:fixed;
   left:0px;
   bottom:0px;
-
   width:100%;
 }
 
+
+/*# text blink effect */
+.willWin {
+	-webkit-animation: blink-text 1500ms linear infinite;
+	-moz-animation: blink-text 1500ms linear infinite;
+	-ms-animation: blink-text 1500ms linear infinite;
+	-o-animation: blink-text 1500ms linear infinite;
+	 animation: blink-text 2500ms linear infinite;
+}
+@-webkit-keyframes blink-text {
+	0% { color: #fff; opacity: 1; }
+	20% { color: #fff;opacity: .8; }
+	30% { color: #fff;opacity: .6; }
+	40% { color: #fff;opacity: .4; }
+	50% { color: #fff;opacity: .2; }
+	60% { color: #fff;opacity: 0; }
+	70% { color: #fff;opacity: .2; }
+	80% { color: #fff;opacity: .4; }
+	90% { color: #fff;opacity: .6; }
+	98% { color: #fff;opacity: .8; }
+	100% { color: #fff;opacity: 1; }
+}
+@-moz-keyframes blink-text {
+	0% { color: #fff; opacity: 1; }
+	20% { color: #fff;opacity: .8; }
+	30% { color: #fff;opacity: .6; }
+	40% { color: #fff;opacity: .4; }
+	50% { color: #fff;opacity: .2; }
+	60% { color: #fff;opacity: 0; }
+	70% { color: #fff;opacity: .2; }
+	80% { color: #fff;opacity: .4; }
+	90% { color: #fff;opacity: .6; }
+	98% { color: #fff;opacity: .8; }
+	100% { color: #fff;opacity: 1; }
+}
+@-ms-keyframes blink-text {
+	0% { color: #fff; opacity: 1; }
+	20% { color: #fff;opacity: .8; }
+	30% { color: #fff;opacity: .6; }
+	40% { color: #fff;opacity: .4; }
+	50% { color: #fff;opacity: .2; }
+	60% { color: #fff;opacity: 0; }
+	70% { color: #fff;opacity: .2; }
+	80% { color: #fff;opacity: .4; }
+	90% { color: #fff;opacity: .6; }
+	98% { color: #fff;opacity: .8; }
+	100% { color: #fff;opacity: 1; }
+}
+@-o-keyframes blink-text {
+	0% { color: #fff; opacity: 1; }
+	20% { color: #fff;opacity: .8; }
+	30% { color: #fff;opacity: .6; }
+	40% { color: #fff;opacity: .4; }
+	50% { color: #fff;opacity: .2; }
+	60% { color: #fff;opacity: 0; }
+	70% { color: #fff;opacity: .2; }
+	80% { color: #fff;opacity: .4; }
+	90% { color: #fff;opacity: .6; }
+	98% { color: #fff;opacity: .8; }
+	100% { color: #fff;opacity: 1; }
+}
+@keyframes blink-text {
+	0% { color: #fff; opacity: 1; }
+	20% { color: #fff;opacity: .8; }
+	30% { color: #fff;opacity: .6; }
+	40% { color: #fff;opacity: .4; }
+	50% { color: #fff;opacity: .2; }
+	60% { color: #fff;opacity: 0; }
+	70% { color: #fff;opacity: .2; }
+	80% { color: #fff;opacity: .4; }
+	90% { color: #fff;opacity: .6; }
+	98% { color: #fff;opacity: .8; }
+	100% { color: #fff;opacity: 1; }
+}
+
+
+/*# Twitter logo */
+.fa {
+	padding: 20px;
+	font-size: 2vw;
+	text-decoration: none;
+	margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-twitter {
+	color: #55ACEE;
+}
+
+  span {
+	color: aliceblue;
+}
