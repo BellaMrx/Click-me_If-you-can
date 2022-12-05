@@ -28,12 +28,12 @@ function clickButton() {
 
 
 var textToAnimate = ["Welcome to my website", 
-"Come on, try it", "It is not that hard", 
-"Really?", 
-"You are making a fool of yourself", 
-"Try again, you will be fine", 
-"Now it is official embarrassing", 
-"Okay, try it now, trust me"];
+                    "Come on, try it", "It is not that hard", 
+                    "Really?", 
+                    "You are making a fool of yourself", 
+                    "Try again, you will be fine", 
+                    "Now it is official embarrassing", 
+                    "Okay, try it now, trust me"];
 var startAnimationAfter = 500; //ms
 
 function reverseAnimation(comments){
