@@ -26,15 +26,17 @@ function clickButton() {
 }
 
 
-
+// create/animate comments
 var textToAnimate = ["Welcome to my website", 
-                    "Come on, try it", "It is not that hard", 
+                    "Come on, try it", 
+                    "It is not that hard", 
                     "Really?", 
                     "You are making a fool of yourself", 
                     "Try again, you will be fine", 
                     "Now it is official embarrassing", 
                     "Okay, try it now, trust me"];
-var startAnimationAfter = 500; //ms
+
+var startReverseAnimationAfter = 99; //500ms
 
 function reverseAnimation(comments){
   var i = textToAnimate[comments].length -1, delay = 0;
@@ -42,23 +44,27 @@ function reverseAnimation(comments){
     let string = textToAnimate[comments].substr(0, i);
     setTimeout('document.getElementById("commentsAI").innerHTML = \'' + string + '\';', 100 * delay);
   }
-  
-   setTimeout(function(){ animateText(comments + 1)}, 100 * delay + startAnimationAfter);
+
+   setTimeout(function(){ animateText(comments + 1)}, 100 * delay + startReverseAnimationAfter);
 }
+
 function animateText(comments){
-  var i =0;
+  var i = 0;
   if(comments ==  textToAnimate.length){
-    comments = 0;
+    comments = 0;   // 7
   }
   for (; i < textToAnimate[comments].length; i++) {
     let string = textToAnimate[comments][i]
     setTimeout('document.getElementById("commentsAI").innerHTML += \'' + string + '\';', 100 * i);
   }
- 
- setTimeout(function(){ reverseAnimation(comments)}, 100 * i + startAnimationAfter);
+// return;
+  setTimeout(function(){ reverseAnimation(comments)}, 100 * i + startReverseAnimationAfter);
+
 }
 
-animateText(0)
+animateText(0);
+
+
 
 
 

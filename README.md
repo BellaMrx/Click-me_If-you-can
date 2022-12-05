@@ -26,3 +26,22 @@
 
 
 
+function animateText(comments){
+  var i = 0;
+  if(comments ==  textToAnimate.length){
+    comments = 0;   // 7
+  }
+  for (; i < textToAnimate[comments].length; i++) {
+    let string = textToAnimate[comments][i]
+    setTimeout('document.getElementById("commentsAI").innerHTML += \'' + string + '\';', 100 * i);
+  }
+ 
+  return(comments);
+
+ setTimeout(function(){ reverseAnimation(comments)}, 100 * i + startReverseAnimationAfter);
+
+}
+
+animateText(0);
+
+
