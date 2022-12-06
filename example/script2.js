@@ -37,7 +37,7 @@ var textToAnimate = ["Welcome to my website",
                     "Now it is official embarrassing",  
                     "Okay, try it now, trust me"];
 
-var startReverseAnimationAfter = 1000; //500ms
+var startReverseAnimationAfter = 100; //500ms
 
 
 function reverseAnimation(comments){
@@ -68,7 +68,29 @@ function animateText(comments){
 animateText(0);
 
 
+const button = document.querySelector(".container-button button");
 
+window.addEventListener("mousemove", (e) => {
+  button.addEventListener("mouseenter", () => {
+    if (textToAnimate.length) {           // egal ob textAI , textToAnimate.length oder btn
+      if (e.movementX > 0) {
+        if (e.pageX < window.innerWidth / 2) {
+          button.style.transform = `translateX(${e.pageX / 3}px)`;
+          button.style.transform = `translateY(${e.pageY / 3}px)`;      // Y-axes
+        } else {
+          button.style.transform = `translateX(-${e.pageX / 3}px)`;
+          button.style.transform = `translateY(-${e.pageY / 3}px)`;     // Y-axes
+        }
+      } else {
+        if (e.pageX < window.innerWidth / 2) {
+          button.style.transform = `translateX(${e.pageX / 3}px)`;
+        } else {
+          button.style.transform = `translateX(-${e.pageX / 3}px)`;
+        }
+      } 
+    } 
+  }   );      // dazwischen
+});
 
 
 
