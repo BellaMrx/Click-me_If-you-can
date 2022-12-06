@@ -45,3 +45,9 @@ function animateText(comments){
 animateText(0);
 
 
+                    "Come on, try it", 
+                    "It is not that hard", 
+                    "Really?", 
+                    "You are making a fool of yourself", 
+                    "Try again, you will be fine", 
+                    "Now it is official embarrassing", 
