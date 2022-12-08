@@ -63,21 +63,23 @@ function animateText(comments){
   }
 
   setTimeout(function(){ reverseAnimation(comments)}, 100 * i + startReverseAnimationAfter);
+
 }
 
 animateText(0);
+
 
 
 // countdown "TRUST ME"
     // The data/time we want to countdown to
     var countDownDate = new Date("Jul 25, 2021 16:37:52").getTime();
 
-    // Run myfunc every second
-    var myfunc = setInterval(function() {
-
     var now = new Date().getTime();
     var timeleft = countDownDate - now;
-        
+
+    // Run myfunc every second
+    var myfunc = setInterval(function() {
+    
     // Calculating the days, hours, minutes and seconds left
     var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
     var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -99,14 +101,19 @@ animateText(0);
         document.getElementById("secs").innerHTML = ""
         document.getElementById("end").innerHTML = "TRUST ME!";
     }
+
     }, 5000);
 
 
+
+
     const button = document.querySelector(".container-button button");
+  // repeat with the interval of 2 seconds
+    let timerId = setInterval(() => (
 
     window.addEventListener("mousemove", (e) => {
       button.addEventListener("mouseenter", () => {
-        
+        if (true) {           // egal ob textAI , textToAnimate.length oder btn
           if (e.movementX > 0) {
             if (e.pageX < window.innerWidth / 2) {
               button.style.transform = `translateX(${e.pageX / 3}px)`;
@@ -121,12 +128,26 @@ animateText(0);
             } else {
               button.style.transform = `translateX(-${e.pageX / 3}px)`;
             }
-           
+          } 
         }  
-      }  );      // dazwischen
-    });
+      }   );      
+    }) ), 100); 
+
+----------------------------------
+
+    clearInterval(timerId);
+    timerId = 1000; // I just do this so I know I've cleared the interval
 
 
+    var interval = null;    
+
+function startStuff(func, time) {
+    interval = setInterval(func, time);
+}
+
+function stopStuff() {
+    clearInterval(interval);
+}
 
 
 

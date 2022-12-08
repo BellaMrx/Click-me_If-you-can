@@ -25,60 +25,6 @@
 
 
 
-
-function animateText(comments){
-  var i = 0;
-  if(comments ==  textToAnimate.length){
-    comments = 0;   // 7
-  }
-  for (; i < textToAnimate[comments].length; i++) {
-    let string = textToAnimate[comments][i]
-    setTimeout('document.getElementById("commentsAI").innerHTML += \'' + string + '\';', 100 * i);
-  }
- 
-  return(comments);
-
- setTimeout(function(){ reverseAnimation(comments)}, 100 * i + startReverseAnimationAfter);
-
-}
-
-animateText(0);
-
-
-                    "Come on, try it", 
-                    "It is not that hard", 
-                    "Really?", 
-                    "You are making a fool of yourself", 
-                    "Try again, you will be fine", 
-                    "Now it is official embarrassing", 
-
-
-
-
-var timer;
-var count = 20;
-
-$("#counter").text(count);
-//update display
-
-timer = setTimeout(update, 1000);
-//this allows for 'clearTimeout' if needed
-
-function update()
-{
-    if (count > 0)
-    {
-       $("#counter").text(--count);
-       timer = setTimeout(update, 1000);
-    }
-    else
-    {
-        alert("Done!!!");
-    }
-}
-
-
-
 --------------------------------------------------------
 
 
@@ -235,3 +181,56 @@ else if (timeleft < 0) {
             }
           }
         }
+
+
+-------------------------------------------------------
+
+    const button = document.querySelector(".container-button button");
+
+    window.addEventListener("mousemove", (e) => {
+      button.addEventListener("mouseenter", () => {
+        
+          if (e.movementX > 0) {
+            if (e.pageX < window.innerWidth / 2) {
+              button.style.transform = `translateX(${e.pageX / 3}px)`;
+              button.style.transform = `translateY(${e.pageY / 3}px)`;      // Y-axes
+            } else {
+              button.style.transform = `translateX(-${e.pageX / 3}px)`;
+              button.style.transform = `translateY(-${e.pageY / 3}px)`;     // Y-axes
+            }
+          } else {
+            if (e.pageX < window.innerWidth / 2) {
+              button.style.transform = `translateX(${e.pageX / 3}px)`;
+            } else {
+              button.style.transform = `translateX(-${e.pageX / 3}px)`;
+            }
+           
+        }  
+      }  );      // dazwischen
+    });
+
+----------------------------------------------------
+
+  // after 5 seconds stop
+  setTimeout(() => { clearInterval(timerId);
+    window.addEventListener("mousemove", (e) => {
+      button.addEventListener("mouseenter", () => {
+        if (0) {           // egal ob textAI , textToAnimate.length oder btn
+          if (e.movementX > 0) {
+            if (e.pageX < window.innerWidth / 2) {
+              button.style.transform = `translateX(${e.pageX / 3}px)`;
+              button.style.transform = `translateY(${e.pageY / 3}px)`;      // Y-axes
+            } else {
+              button.style.transform = `translateX(-${e.pageX / 3}px)`;
+              button.style.transform = `translateY(-${e.pageY / 3}px)`;     // Y-axes
+            }
+          } else {
+            if (e.pageX < window.innerWidth / 2) {
+              button.style.transform = `translateX(${e.pageX / 3}px)`;
+            } else {
+              button.style.transform = `translateX(-${e.pageX / 3}px)`;
+            }
+          } 
+        }  
+      }   );      
+    }) }, 5000);
