@@ -5,21 +5,21 @@ let img = document.querySelector(".cup");
 let btn = document.querySelector(".container-button");
 
 let afterbtnTimer = document.querySelector("#end");
-
+let countdownDiv = document.querySelector(".countdown");
 
 function clickButton() {
   // winner message 1
   winText1.innerHTML = "You can!";
 
   // winner message 2
-  winText2.innerHTML = "Congratulations, you have won the realization that you like to waste your time with nonsense.";
+  winText2.innerHTML = "Congratulations, you have come to the realization that you are patient and like to waste your time on nonsense.";
   winText2.style.overflowWrap="inherit";
 
   // lets display cup
-  img.src = "trophy2.png";
-	img.style.width = "125px";
-	img.style.height = "125px";
-  img.style.marginTop = "5%"
+  img.src = "medal1.PNG";
+	img.style.width = "200px";
+	img.style.height = "175px";
+  img.style.marginTop = "2%"
 
   // remove button
   btn.style.display = 'none';
@@ -29,6 +29,9 @@ function clickButton() {
 
   // remove "Trust me" after click
   afterbtnTimer.style.display = "none"; 
+
+  // remove "countdown" after click
+  countdownDiv.style.display = "none"; 
 }
 
 
@@ -43,7 +46,7 @@ var textToAnimate = ["Welcome to my website",
                     "Now it is official embarrassing",  
                     "Okay, try it now, trust me"];
 
-var startReverseAnimationAfter = 100; //500ms
+var startReverseAnimationAfter = 500; //500ms
 
 
 function reverseAnimation(comments){
@@ -77,30 +80,28 @@ animateText(0);
 
 
 // countdown "TRUST ME"
-    // The data/time we want to countdown to
+    // the data/time we want to countdown to
     var countDownDate = new Date("Jul 25, 2021 16:37:52").getTime();
 
     var now = new Date().getTime();
     var timeleft = countDownDate - now;
 
-    
-
-    // Run myfunc every second
+    // run myfunc every second
     var myfunc = setInterval(function() {
     
-    // Calculating the days, hours, minutes and seconds left
+    // calculating the days, hours, minutes and seconds left
     var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
     var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
         
-    // Result is output to the specific element
+    // result is output to the specific element
     document.getElementById("days").innerHTML = days + "d "
     document.getElementById("hours").innerHTML = hours + "h " 
     document.getElementById("mins").innerHTML = minutes + "m " 
     document.getElementById("secs").innerHTML = seconds + "s " 
         
-    // Display the message when countdown is over
+    // display the message when countdown is over
     if (timeleft < 0) {
         clearInterval(myfunc);
         document.getElementById("days").innerHTML = ""
@@ -110,29 +111,28 @@ animateText(0);
         document.getElementById("end").innerHTML = "Trust me!";
     }
 
-    }, 5000);
+    }, 43500);
 
 
 
-
+// stops the movement of the button
     var buttonTimer = 1;
 
-    var myfunc1 = setInterval(function() {
+    var myfunc2 = setInterval(function() {
       buttonTimer++;
-      alert("yo");
-    }, 5000);
-
-    function myStopFunction() {
-      clearInterval(myfunc1);
-    }
+      if (buttonTimer === 2) {
+        clearInterval(myfunc2);
+      }
+    }, 43500);
 
 
 
+// moves the button
     const button = document.querySelector(".container-button button");
 
     window.addEventListener("mousemove", (e) => {
       button.addEventListener("mouseenter", () => {
-        if (buttonTimer === 1) {           // egal ob textAI , textToAnimate.length oder btn
+        if (buttonTimer === 1) {           
           if (e.movementX > 0) {
             if (e.pageX < window.innerWidth / 2) {
               button.style.transform = `translateX(${e.pageX / 3}px)`;
@@ -149,7 +149,7 @@ animateText(0);
             }
           } 
         } 
-      }   );      // dazwischen
+      });      
     });
 
 
