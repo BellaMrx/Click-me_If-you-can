@@ -99,17 +99,26 @@ animateText(0);
         document.getElementById("hours").innerHTML = "" 
         document.getElementById("mins").innerHTML = ""
         document.getElementById("secs").innerHTML = ""
-        document.getElementById("end").innerHTML = "TRUST ME!";
+        document.getElementById("end").innerHTML = "Trust me!";
     }
 
     }, 5000);
 
 
 
+    var myfunc2 = setInterval(function() {
+    
+
+  
+      }, 5000);
+
+
+
 
     const button = document.querySelector(".container-button button");
-  // repeat with the interval of 2 seconds
-    let timerId = setInterval(() => (
+
+
+  do {
 
     window.addEventListener("mousemove", (e) => {
       button.addEventListener("mouseenter", () => {
@@ -129,25 +138,21 @@ animateText(0);
               button.style.transform = `translateX(-${e.pageX / 3}px)`;
             }
           } 
-        }  
-      }   );      
-    }) ), 100); 
-
-----------------------------------
-
-    clearInterval(timerId);
-    timerId = 1000; // I just do this so I know I've cleared the interval
+        } 
+      }   );      // dazwischen
+    });
 
 
-    var interval = null;    
+    }
+    
+    while (countDownDate < 5000);
 
-function startStuff(func, time) {
-    interval = setInterval(func, time);
-}
+  
 
-function stopStuff() {
-    clearInterval(interval);
-}
+ // settimeout in settimeout?
+
+
+
 
 
 
