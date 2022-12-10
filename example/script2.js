@@ -4,6 +4,8 @@ let textAI = document.querySelector(".text3");
 let img = document.querySelector(".cup");
 let btn = document.querySelector(".container-button");
 
+let afterbtnTimer = document.querySelector("#end");
+
 
 function clickButton() {
   // winner message 1
@@ -24,7 +26,11 @@ function clickButton() {
 
   // remove commentsAI 
   textAI.style.display = "none"; 
+
+  // remove "Trust me" after click
+  afterbtnTimer.style.display = "none"; 
 }
+
 
 
 // create/animate comments
@@ -77,6 +83,8 @@ animateText(0);
     var now = new Date().getTime();
     var timeleft = countDownDate - now;
 
+    
+
     // Run myfunc every second
     var myfunc = setInterval(function() {
     
@@ -106,23 +114,25 @@ animateText(0);
 
 
 
-    var myfunc2 = setInterval(function() {
-    
 
-  
-      }, 5000);
+    var buttonTimer = 1;
 
+    var myfunc1 = setInterval(function() {
+      buttonTimer++;
+      alert("yo");
+    }, 5000);
+
+    function myStopFunction() {
+      clearInterval(myfunc1);
+    }
 
 
 
     const button = document.querySelector(".container-button button");
 
-
-  do {
-
     window.addEventListener("mousemove", (e) => {
       button.addEventListener("mouseenter", () => {
-        if (true) {           // egal ob textAI , textToAnimate.length oder btn
+        if (buttonTimer === 1) {           // egal ob textAI , textToAnimate.length oder btn
           if (e.movementX > 0) {
             if (e.pageX < window.innerWidth / 2) {
               button.style.transform = `translateX(${e.pageX / 3}px)`;
@@ -143,13 +153,10 @@ animateText(0);
     });
 
 
-    }
-    
-    while (countDownDate < 5000);
 
   
 
- // settimeout in settimeout? / delay button?
+
 
 
 

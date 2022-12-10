@@ -234,3 +234,71 @@ else if (timeleft < 0) {
         }  
       }   );      
     }) }, 5000);
+
+
+--------------------------------------------
+
+    var myfunc2 = setInterval(function() {
+    
+      // do stuff
+  
+      }, 5000);
+
+ // settimeout in settimeout? / delay button?
+
+-----------------------------------------------
+
+  do {
+    // do stuff
+    }
+    
+    while (timeleft === false);
+
+-----------------------------------------------
+
+else {
+          return;
+        }
+
+----------------------------------------------
+
+if (myfunc > 5000)  // button bewegt sich nicht
+
+if (myfunc > 0)     // button bewegt sich
+ 
+ myfunc > 0 - 22  funktioniert ?
+
+ ---------------------------------------------
+
+ set timeout in if else mit return;
+
+ --------------------------------
+
+function clickButton() {
+  // winner message 1
+  winText1.innerHTML = "You can!";
+
+  // winner message 2
+  winText2.innerHTML = "Congratulations, you have won the realization that you like to waste your time with nonsense.";
+  winText2.style.overflowWrap="inherit";
+
+  // lets display cup
+  img.src = "trophy2.png";
+	img.style.width = "125px";
+	img.style.height = "125px";
+  img.style.marginTop = "5%"
+
+  // remove button
+  btn.style.display = 'none';
+
+  // remove commentsAI 
+  textAI.style.display = "none"; 
+}
+ 
+
+---------------------------------------------------------------
+     var buttonTimer = 1;
+
+    var myfunc1 = setInterval(function() {
+      buttonTimer++;
+    }, 5000);
