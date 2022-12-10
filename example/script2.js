@@ -115,7 +115,7 @@ animateText(0);
 
 
 
-// stops the movement of the button
+// stops the movement of the button after timeout
     var buttonTimer = 1;
 
     var myfunc2 = setInterval(function() {
