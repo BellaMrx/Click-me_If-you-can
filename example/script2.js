@@ -149,7 +149,7 @@ animateText(0);
 
   
 
- // settimeout in settimeout?
+ // settimeout in settimeout? / delay button?
 
 
 
