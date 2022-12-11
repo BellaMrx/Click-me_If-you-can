@@ -3,6 +3,6 @@
  only HTML, CSS, JS
 
 
- <video src='ClickMe.mp4' width=180/>
+ ![PreviewImage](Images/ClickMePreview.PNG)
 
 
