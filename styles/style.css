@@ -1,92 +1,191 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-*,
-::before,
-::after {
+* {
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
-  color: #000;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  color: #fff;
   font-weight: 300;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-li {
-  list-style: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: rgb(238, 236, 236);
+  text-align: center;
+  height: auto;
+  background-image: radial-gradient(circle, #ee4b2b, #553c9a);
 }
 
+
 .container {
-  width: 500px;
+  display: inline-block;  /*# font left and center */
+  text-align: center;       /*# text-align: left;  font left and center */
+  font-size: 1.5rem;
+  margin: 1rem;
+
+  
+  /*# width: 500px; ???? */
   max-width: 90%;
-  margin: 0 20px;
+  max-height: min-content;
 }
-.container-input {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 20px 0;
+
+.container p {
+  padding-top: 5px;
 }
-.container-input label {
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 5px;
+
+.container img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
-.container-input input {
-  width: 100%;
-  border: 1px solid #7d8085;
-  border-radius: 4px;
-  padding: 10px;
-  outline: none;
-}
-.container-input input:focus {
-  border-color: #bcbec3;
-}
-.container-input input.error {
-  border: 3px solid red;
-}
-.container-input input.done {
-  border: 3px solid green;
-}
-.container-button {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .container-button button {
-  background: #2a3443;
+  background: aliceblue;
   border: none;
   border-radius: 4px;
   padding: 10px;
   width: 250px;
   font-size: 16px;
   font-weight: 600;
-  color: #e9ad38;
-  margin-top: 20px;
+  color: #553c9a;
+  margin: 7rem;
+  cursor: pointer;     /*# grab; */
   transition: 0.3s ease-in-out;
+  -webkit-animation: glowing 3000ms infinite;
+  -moz-animation: glowing 3000ms infinite;
+  -o-animation: glowing 3000ms infinite;
+  animation: glowing 3000ms infinite;
 }
-.container-button button.correct {
-  transform: translate(0) !important;
-  cursor: pointer;
-  width: 100%;
-  background: #e9ad38;
-  color: #252f3f;
-}/*# sourceMappingURL=style.css.map */
+
+@-webkit-keyframes glowing {
+  0% { background-color: aliceblue; -webkit-box-shadow: 0 0 3px aliceblue; }
+  50% { background-color: #fff; -webkit-box-shadow: 0 0 40px #fff; }
+  100% { background-color: aliceblue; -webkit-box-shadow: 0 0 3px aliceblue; }
+}
+
+@-moz-keyframes glowing {
+  0% { background-color: aliceblue; -moz-box-shadow: 0 0 3px aliceblue; }
+  50% { background-color: #fff; -moz-box-shadow: 0 0 40px #fff }
+  100% { background-color: aliceblue; -moz-box-shadow: 0 0 3px aliceblue; }
+}
+
+@-o-keyframes glowing {
+  0% { background-color: aliceblue; box-shadow: 0 0 3px aliceblue; }
+  50% { background-color: #fff; box-shadow: 0 0 40px #fff; }
+  100% { background-color: aliceblue; box-shadow: 0 0 3px aliceblue; }
+}
+
+@keyframes glowing {
+  0% { background-color: aliceblue; box-shadow: 0 0 3px aliceblue; }
+  50% { background-color: #fff; box-shadow: 0 0 40px #fff; }
+  100% { background-color: aliceblue; box-shadow: 0 0 3px aliceblue; }
+}
+
+
+
+
+
+
+.container-footer {
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  width:100%;
+}
+
+
+/*# text blink effect */
+.willWin {
+	-webkit-animation: blink-text 1500ms linear infinite;
+	-moz-animation: blink-text 1500ms linear infinite;
+	-ms-animation: blink-text 1500ms linear infinite;
+	-o-animation: blink-text 1500ms linear infinite;
+	 animation: blink-text 2500ms linear infinite;
+}
+@-webkit-keyframes blink-text {
+	0% { color: #fff; opacity: 1; }
+	20% { color: #fff;opacity: .8; }
+	30% { color: #fff;opacity: .6; }
+	40% { color: #fff;opacity: .4; }
+	50% { color: #fff;opacity: .2; }
+	60% { color: #fff;opacity: 0; }
+	70% { color: #fff;opacity: .2; }
+	80% { color: #fff;opacity: .4; }
+	90% { color: #fff;opacity: .6; }
+	98% { color: #fff;opacity: .8; }
+	100% { color: #fff;opacity: 1; }
+}
+@-moz-keyframes blink-text {
+	0% { color: #fff; opacity: 1; }
+	20% { color: #fff;opacity: .8; }
+	30% { color: #fff;opacity: .6; }
+	40% { color: #fff;opacity: .4; }
+	50% { color: #fff;opacity: .2; }
+	60% { color: #fff;opacity: 0; }
+	70% { color: #fff;opacity: .2; }
+	80% { color: #fff;opacity: .4; }
+	90% { color: #fff;opacity: .6; }
+	98% { color: #fff;opacity: .8; }
+	100% { color: #fff;opacity: 1; }
+}
+@-ms-keyframes blink-text {
+	0% { color: #fff; opacity: 1; }
+	20% { color: #fff;opacity: .8; }
+	30% { color: #fff;opacity: .6; }
+	40% { color: #fff;opacity: .4; }
+	50% { color: #fff;opacity: .2; }
+	60% { color: #fff;opacity: 0; }
+	70% { color: #fff;opacity: .2; }
+	80% { color: #fff;opacity: .4; }
+	90% { color: #fff;opacity: .6; }
+	98% { color: #fff;opacity: .8; }
+	100% { color: #fff;opacity: 1; }
+}
+@-o-keyframes blink-text {
+	0% { color: #fff; opacity: 1; }
+	20% { color: #fff;opacity: .8; }
+	30% { color: #fff;opacity: .6; }
+	40% { color: #fff;opacity: .4; }
+	50% { color: #fff;opacity: .2; }
+	60% { color: #fff;opacity: 0; }
+	70% { color: #fff;opacity: .2; }
+	80% { color: #fff;opacity: .4; }
+	90% { color: #fff;opacity: .6; }
+	98% { color: #fff;opacity: .8; }
+	100% { color: #fff;opacity: 1; }
+}
+@keyframes blink-text {
+	0% { color: #fff; opacity: 1; }
+	20% { color: #fff;opacity: .8; }
+	30% { color: #fff;opacity: .6; }
+	40% { color: #fff;opacity: .4; }
+	50% { color: #fff;opacity: .2; }
+	60% { color: #fff;opacity: 0; }
+	70% { color: #fff;opacity: .2; }
+	80% { color: #fff;opacity: .4; }
+	90% { color: #fff;opacity: .6; }
+	98% { color: #fff;opacity: .8; }
+	100% { color: #fff;opacity: 1; }
+}
+
+
+/*# Twitter logo */
+.fa {
+	padding: 5px;
+	font-size: 2vw;
+	text-decoration: none;
+	margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-twitter {
+	color: #55ACEE;
+}
+
+  span {
+	color: aliceblue;
+}
+

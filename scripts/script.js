@@ -16,7 +16,7 @@ function clickButton() {
   winText2.style.overflowWrap="inherit";
 
   // lets display cup
-  img.src = "medal1.PNG";
+  img.src = "Images/medal1.PNG";
 	img.style.width = "200px";
 	img.style.height = "175px";
   img.style.marginTop = "2%"
@@ -152,28 +152,6 @@ animateText(0);
       });      
     });
 
-
-    window.addEventListener("touchmove", (event) => {
-    button.addEventListener("touchenter", () => {
-      if (buttonTimer === 1) {           
-        if (event.movementX > 0) {
-          if (event.pageX < window.innerWidth / 2) {
-            button.style.transform = `translateX(${event.pageX / 3}px)`;
-            button.style.transform = `translateY(${event.pageY / 3}px)`;      // Y-axes
-          } else {
-            button.style.transform = `translateX(-${event.pageX / 3}px)`;
-            button.style.transform = `translateY(-${event.pageY / 3}px)`;     // Y-axes
-          }
-        } else {
-          if (event.pageX < window.innerWidth / 2) {
-            button.style.transform = `translateX(${event.pageX / 3}px)`;
-          } else {
-            button.style.transform = `translateX(-${event.pageX / 3}px)`;
-          }
-        } 
-      } 
-    });
-  });    
 
 
   
