@@ -5,7 +5,7 @@
 
  Save the files in a folder and open the file "ClickMe.html" in your browser.
  
- Video on Twitter: [@bella_mrx](https://twitter.com/bella_mrx/status/1602029339746484225?s=20&t=r6dEnjDFLtHHASiTsxbiiA)
+ Video on [YouTube](https://www.youtube.com/watch?v=WyR1FjCqa5Y)
 
  ![PreviewImage](Images/ClickMePreview.PNG)
 
