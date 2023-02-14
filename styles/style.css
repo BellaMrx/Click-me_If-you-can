@@ -1,89 +1,89 @@
 * {
-  box-sizing: border-box;
-  font-family: 'Helvetica', 'Arial', sans-serif;
-  color: #fff;
-  font-weight: 300;
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
+	box-sizing: border-box;
+	font-family: 'Helvetica', 'Arial', sans-serif;
+	color: #fff;
+	font-weight: 300;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
 }
 
 
 body {
-  text-align: center;
-  height: auto;
-  background-image: radial-gradient(circle, #ee4b2b, #553c9a);
+	text-align: center;
+	height: auto;
+	background-image: radial-gradient(circle, #ee4b2b, #553c9a);
 }
 
 
 .container {
-  display: inline-block;  
-  text-align: center;       
-  font-size: 1.5rem;
-  margin: 1rem;
-  max-width: 90%;
-  max-height: min-content;
+	display: inline-block;  
+	text-align: center;       
+	font-size: 1.5rem;
+	margin: 1rem;
+	max-width: 90%;
+	max-height: min-content;
 }
 
 .container p {
-  padding-top: 5px;
+	padding-top: 5px;
 }
 
 .container img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
 }
 
 .container-button button {
-  background: aliceblue;
-  border: none;
-  border-radius: 4px;
-  padding: 10px;
-  width: 250px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #553c9a;
-  margin: 7rem;
-  cursor: pointer;     /*# grab; */
-  transition: 0.3s ease-in-out;
-  -webkit-animation: glowing 3000ms infinite;
-  -moz-animation: glowing 3000ms infinite;
-  -o-animation: glowing 3000ms infinite;
-  animation: glowing 3000ms infinite;
+	background: aliceblue;
+	border: none;
+	border-radius: 4px;
+	padding: 10px;
+	width: 250px;
+	font-size: 16px;
+	font-weight: 600;
+	color: #553c9a;
+	margin: 7rem;
+	cursor: pointer;     /*# grab; */
+	transition: 0.3s ease-in-out;
+	-webkit-animation: glowing 3000ms infinite;
+	-moz-animation: glowing 3000ms infinite;
+	-o-animation: glowing 3000ms infinite;
+	animation: glowing 3000ms infinite;
 }
 
 @-webkit-keyframes glowing {
-  0% { background-color: aliceblue; -webkit-box-shadow: 0 0 3px aliceblue; }
-  50% { background-color: #fff; -webkit-box-shadow: 0 0 40px #fff; }
-  100% { background-color: aliceblue; -webkit-box-shadow: 0 0 3px aliceblue; }
+	0% { background-color: aliceblue; -webkit-box-shadow: 0 0 3px aliceblue; }
+	50% { background-color: #fff; -webkit-box-shadow: 0 0 40px #fff; }
+	100% { background-color: aliceblue; -webkit-box-shadow: 0 0 3px aliceblue; }
 }
 
 @-moz-keyframes glowing {
-  0% { background-color: aliceblue; -moz-box-shadow: 0 0 3px aliceblue; }
-  50% { background-color: #fff; -moz-box-shadow: 0 0 40px #fff }
-  100% { background-color: aliceblue; -moz-box-shadow: 0 0 3px aliceblue; }
+	0% { background-color: aliceblue; -moz-box-shadow: 0 0 3px aliceblue; }
+	50% { background-color: #fff; -moz-box-shadow: 0 0 40px #fff }
+	100% { background-color: aliceblue; -moz-box-shadow: 0 0 3px aliceblue; }
 }
 
 @-o-keyframes glowing {
-  0% { background-color: aliceblue; box-shadow: 0 0 3px aliceblue; }
-  50% { background-color: #fff; box-shadow: 0 0 40px #fff; }
-  100% { background-color: aliceblue; box-shadow: 0 0 3px aliceblue; }
+	0% { background-color: aliceblue; box-shadow: 0 0 3px aliceblue; }
+	50% { background-color: #fff; box-shadow: 0 0 40px #fff; }
+	100% { background-color: aliceblue; box-shadow: 0 0 3px aliceblue; }
 }
 
 @keyframes glowing {
-  0% { background-color: aliceblue; box-shadow: 0 0 3px aliceblue; }
-  50% { background-color: #fff; box-shadow: 0 0 40px #fff; }
-  100% { background-color: aliceblue; box-shadow: 0 0 3px aliceblue; }
+	0% { background-color: aliceblue; box-shadow: 0 0 3px aliceblue; }
+	50% { background-color: #fff; box-shadow: 0 0 40px #fff; }
+	100% { background-color: aliceblue; box-shadow: 0 0 3px aliceblue; }
 }
 
 
 .container-footer {
-  position:fixed;
-  left:0px;
-  bottom:0px;
-  width:100%;
+	position:fixed;
+	left:0px;
+	bottom:0px;
+	width:100%;
 }
 
 
@@ -93,8 +93,9 @@ body {
 	-moz-animation: blink-text 1500ms linear infinite;
 	-ms-animation: blink-text 1500ms linear infinite;
 	-o-animation: blink-text 1500ms linear infinite;
-	 animation: blink-text 2500ms linear infinite;
+	animation: blink-text 2500ms linear infinite;
 }
+
 @-webkit-keyframes blink-text {
 	0% { color: #fff; opacity: 1; }
 	20% { color: #fff;opacity: .8; }
@@ -108,6 +109,7 @@ body {
 	98% { color: #fff;opacity: .8; }
 	100% { color: #fff;opacity: 1; }
 }
+
 @-moz-keyframes blink-text {
 	0% { color: #fff; opacity: 1; }
 	20% { color: #fff;opacity: .8; }
@@ -121,6 +123,7 @@ body {
 	98% { color: #fff;opacity: .8; }
 	100% { color: #fff;opacity: 1; }
 }
+
 @-ms-keyframes blink-text {
 	0% { color: #fff; opacity: 1; }
 	20% { color: #fff;opacity: .8; }
@@ -134,6 +137,7 @@ body {
 	98% { color: #fff;opacity: .8; }
 	100% { color: #fff;opacity: 1; }
 }
+
 @-o-keyframes blink-text {
 	0% { color: #fff; opacity: 1; }
 	20% { color: #fff;opacity: .8; }
@@ -147,6 +151,7 @@ body {
 	98% { color: #fff;opacity: .8; }
 	100% { color: #fff;opacity: 1; }
 }
+
 @keyframes blink-text {
 	0% { color: #fff; opacity: 1; }
 	20% { color: #fff;opacity: .8; }
@@ -171,14 +176,14 @@ body {
 }
 
 .fa:hover {
-    opacity: 0.7;
+	opacity: 0.7;
 }
 
 .fa-twitter {
 	color: #55ACEE;
 }
 
-  span {
+span {
 	color: aliceblue;
 }
 
